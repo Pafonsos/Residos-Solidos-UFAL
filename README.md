@@ -3,5 +3,5 @@
 ## Planejamento
 
 - Bruno: Mapa
-- Kelvin: Graficos com dropbox
+- Kelvin: Graficos com barra
 - Pedro Afonso: Badge com informacoes
