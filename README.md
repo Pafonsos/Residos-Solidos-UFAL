@@ -1,6 +1,6 @@
 # Residos-Solidos-UFAL
 
-## Planejamento
+## Planejamento ##
 
 - Bruno: Mapa
 - Kelvin: Graficos com barra
