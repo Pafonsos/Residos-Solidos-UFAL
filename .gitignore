@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+ENV/
+
+# Configurações de IDEs (VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Variáveis de ambiente (Segurança)
+.env
+
+# Arquivos de log e banco de dados
+*.log
+db.sqlite3

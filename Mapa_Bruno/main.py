@@ -3,7 +3,7 @@ import dash
 from dash import html
 
 #READ FILE WITH GEOPANDAS AND SHOW HEADS
-bairros = gpd.read_file("AL_bairros_CD2022.dbf")
+bairros = gpd.read_file("Mapa_Bruno/AL_bairros_CD2022.dbf")
 bairros.head()
 
 
