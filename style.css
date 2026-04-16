@@ -14,7 +14,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       width: 100%;
       max-width: 1400px;
@@ -72,7 +72,6 @@
       background: white;
       border-radius: 12px;
       border: 1px solid #E5E7EB;
-      padding: 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
