@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard</title>
-  <link rel="stylesheet" href="../style.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -47,11 +47,22 @@
     </div>
 
     <!-- Card 4 -->
-    <div class="card" style="grid-column: span 3;">
-      <div>
-        <p class="card-texto">pesquisa</p>
-        <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
+    <div class="card" style="grid-column: span 2;">
+    <div class="butão-filtro">
+      <button class="butão">Dia</button>
+      <button class="butão">Mês</button>
+      <button class="butão">Ano</button>
       </div>
+
+    <input type="text"
+         placeholder="Pesquisar..."
+         class="barra-pesquisa"/>
+      </div>
+
+      <!-- Card 5 -->
+    <div class="card" style="grid-column: span 5;">
+      <p class="card-texto">escolha de grafico</p>
+      <!-- código do gráfico aqui -->
     </div>
 
     <!-- Card grande 1 -->
@@ -62,7 +73,7 @@
 
     <!-- Card grande 2  -->
     <div class="card-grande">
-      <p class="card-texto">Mapa</p>
+      <img src="../Mapa_Bruno/meu_mapa_maceio.png" class="mapa"/>
       <!-- código do mapa aqui -->
     </div>
     <!-- Card grande 3  -->
