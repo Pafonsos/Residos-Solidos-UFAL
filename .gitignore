@@ -18,3 +18,7 @@ ENV/
 # Arquivos de log e banco de dados
 *.log
 db.sqlite3
+
+#arqivos
+
+Rel_Pesagem_Maceio_20251002.xlsx
