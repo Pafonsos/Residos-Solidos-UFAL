@@ -15,7 +15,6 @@ bairros.head()
 filter_maceio = bairros.loc[bairros['NM_MUN'] == 'Maceió']
 filter_maceio = filter_maceio.drop(['CD_REGIAO', 'NM_REGIAO', 'CD_UF', 'CD_DIST', 'NM_DIST', 'CD_SUBDIST', 'CD_BAIRRO', 'CD_RGINT', 'CD_RGI', 'NM_RGI', 'CD_CONCURB', 'NM_CONCURB'], axis=1)
 new_bairros = filter_maceio.explore(tiles="CartoDB positron", min_zoom=5, max_zoom=20,)
-new_bairros.save("Mapa_Bruno/mapa_bairros_maceio.html")
 mapa_html = new_bairros._repr_html_()
 
 
