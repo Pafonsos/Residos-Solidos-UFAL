@@ -1,80 +1,17 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+import dash
+from dash import html
 
-  <div class="cards">
+app = dash.Dash(__name__)
 
-    <!-- Card 1 -->
-    <div class="card">
-      <div>
-        <p class="card-texto">População Total</p>
-        <p class="card-numero">0</p>
-        <p class="card-titulo">habitantes</p>
-      </div>
-      <div class="icone" style="background: #3B82F6;">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-    </div>
+app.layout = html.Div([
+    html.Div([
+        html.Div(className="card-filtros", children=[html.H1("Filtros")]),
+        html.Div([
+            html.Div(className="card-grande"),
+            html.Div(className="card-grande"),
+        ], className="cards")
+    ], className="espaçamento")
+], className="m-container")
 
-    <!-- Card 2 -->
-    <div class="card">
-      <div>
-        <p class="card-texto">Renda Média</p>
-        <p class="card-numero">R$ 0</p>
-        <p class="card-titulo">por habitante</p>
-      </div>
-      <div class="icone" style="background: #22C55E;">
-        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <div>
-        <p class="card-texto">Coleta de Lixo</p>
-        <p class="card-numero">0</p>
-        <p class="card-titulo">ton/mês</p>
-      </div>
-      <div class="icone" style="background: #F97316;">
-        <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4h6v2"/></svg>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card" style="grid-column: span 2;">
-    <div class="butão-filtro">
-      <button class="butão">Dia</button>
-      <button class="butão">Mês</button>
-      <button class="butão">Ano</button>
-      </div>
-
-    <input type="text"
-         placeholder="Pesquisar..."
-         class="barra-pesquisa"/>
-      </div>
-
-      <!-- Card 5 -->
-    <div class="card" style="grid-column: span 5;">
-      <p class="card-texto">escolha de grafico</p>
-      <!-- código do gráfico aqui -->
-    </div>
-
-    <!-- Card grande 1 -->
-    <div class="card-grande">
-      <iframe src="../graficos/grafico_residuos.html" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
-
-    <!-- Card grande 2.1  -->
-    <div class="card-grande">
-      <iframe src="../Mapa_Bruno/mapa_bairros_maceio.html" width="100%" height="100%" frameborder="0"></iframe>
-    </div>
-  </div>
-
-</body>
-</html>
+if __name__ == "__main__":
+    app.run(debug=True)
