@@ -43,3 +43,24 @@ body {
     flex-direction: column;
     gap: 10px;
 }
+
+.card-filtros-conteudo {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.botão {
+    width: 150px;
+    height: 40px;
+    background: #2596ED;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}

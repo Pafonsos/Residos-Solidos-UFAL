@@ -5,7 +5,9 @@ app = dash.Dash(__name__)
 
 app.layout = html.Div([
     html.Div([
-        html.Div(className="card-filtros", children=[html.H1("Filtros")]),
+        html.Div([html.Div([
+            html.Button('Bairro', className="botão"),
+            html.Button('Região Administrativa', className="botão")], className="card-filtros-conteudo")], className="card-filtros"),
         html.Div([
             html.Div(className="card-grande"),
             html.Div(className="card-grande"),
