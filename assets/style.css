@@ -6,11 +6,9 @@ body {
 .m-container {
     background: #1E293B;
     height: 99vh;
-    border-radius: 10px;
-    margin: 10px;
-    width: calc(100% - 20px);
+    width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -24,10 +22,11 @@ body {
 }
 
 .card-grande {
-    height: 400px;
+    height: 480px;
     flex: 1;
     background: #334155;
     border-radius: 8px;
+    
 }
 
 .card-filtros {
@@ -41,7 +40,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .card-filtros-conteudo {
@@ -53,8 +52,21 @@ body {
 }
 
 .botão {
-    width: 150px;
-    height: 40px;
+    width: 130px;
+    height: 50px;
+    background: #2596ED;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botão-visualização {
+    width: 130px;
+    height: 50px;
     background: #2596ED;
     border-radius: 8px;
     display: flex;
