@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 from dash import Dash, dcc, html
 
 bairros = gpd.read_file(
-    "AL_bairros_CD2022.shp",
+    "components\Mapa_Bruno\AL_bairros_CD2022\AL_bairros_CD2022.shp",
     engine="pyogrio"
 )
 
@@ -44,7 +44,8 @@ figura_mapa = go.Figure(
         text=bairros_maceio["NM_BAIRRO"],
         hovertemplate="<b>%{text}</b><extra></extra>",
         marker_line_width=1,
-        marker_opacity=0.45
+        marker_opacity=0.45,
+
     )
 )
 

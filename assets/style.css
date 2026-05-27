@@ -26,7 +26,6 @@ body {
     flex: 1;
     background: #334155;
     border-radius: 8px;
-    
 }
 
 .card-filtros {
@@ -34,6 +33,10 @@ body {
     width: 100%;
     background: #334155;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .espaçamento {
@@ -43,12 +46,28 @@ body {
     gap: 15px;
 }
 
-.card-filtros-conteudo {
+.card-filtros-conteudo-centro {
     display: flex;
-    gap: 10px;
-    justify-content: center;
     align-items: center;
-    height: 100%;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.card-filtros-conteudo-esquerda {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex: 1;
+}
+
+.card-filtros-conteudo-direita {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex: 1;
 }
 
 .botão {
@@ -56,23 +75,64 @@ body {
     height: 50px;
     background: #2596ED;
     border-radius: 8px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: white;
     font-weight: bold;
     cursor: pointer;
 }
 
 .botão-visualização {
-    width: 130px;
-    height: 50px;
+    width: 60px;
+    height: 30px;
     background: #2596ED;
-    border-radius: 8px;
+    border-radius: 100px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     color: white;
     font-weight: bold;
+    font-size: 10px;
     cursor: pointer;
+}
+
+.dropdown {
+    width: 170px;
+}
+
+
+.dropdown .Select-control {
+    height: 30px;
+    background: #cfd8e1;
+    border: none;
+    border-radius: 8px;
+}
+
+
+.dropdown .Select-value-label {
+    color: #1E293B !important;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown .Select-placeholder {
+    color: #475569;
+    text-align: center;
+    width: 100%;
+}
+
+.dropdown .Select-placeholder,
+.dropdown .Select-value {
+    line-height: 30px;
+}
+
+
+.dropdown .Select-menu-outer {
+    border-radius: 8px;
 }
