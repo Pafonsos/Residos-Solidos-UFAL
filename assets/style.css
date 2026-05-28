@@ -52,9 +52,26 @@ body {
     justify-content: center;
     gap: 10px;
     flex: 1;
+    border-right: 2px solid #dadfe5;
+    border-left: 2px solid #dadfe5;
 }
 
 .card-filtros-conteudo-esquerda {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex: 1;
+    flex-direction: column;
+}
+.card-filtros-conteudo-cima {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex: 1;
+}
+.card-filtros-conteudo-baixo {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -109,13 +126,12 @@ body {
 .dropdown .Select-control {
     height: 30px;
     background: #cfd8e1;
-    border: none;
     border-radius: 8px;
 }
 
 
 .dropdown .Select-value-label {
-    color: #1E293B !important;
+    color: #1E293B;
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -135,4 +151,21 @@ body {
 
 .dropdown .Select-menu-outer {
     border-radius: 8px;
+}
+
+.Texto-dropdown {
+    color: #cfd8e1;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.input-pesquisa {
+    width: 100px;
+    height: 30px;
+    background: #cfd8e1;
+    border-radius: 8px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: #1E293B;
+
 }
