@@ -6,7 +6,6 @@ app = dash.Dash(__name__)
 
 app.layout = layout
 
-# Registrar todos os callbacks
 callbacks(app)
 
 if __name__ == "__main__":
