@@ -2,13 +2,53 @@ from dash import callback, Input, Output, State
 import dash
 
 
-BAIRROS = ['Centro', 'Prado', 'Pajuçara', 'Mangabeiras']
-REGIOES_ADM = ['Região 1', 'Região 2', 'Região 3']
+BAIRROS = ['Antares', 'Barro Duro', 'Bebedouro', 'Benedito Bentes', 'Bom Parto', 'Canaã','Centro',
+'Chã da Jaqueira',
+'Chã de Bebedouro',
+'Cidade Universitária',
+'Clima Bom',
+'Cruz das Almas',
+'Farol',
+'Feitosa',
+'Fernão Velho',
+'Garça Torta',
+'Gruta de Lourdes',
+'Guaxuma',
+'Ipioca',
+'Jacarecica',
+'Jacintinho',
+'Jaraguá',
+'Jardim Petrópolis',
+'Jatiúca',
+'Levada',
+'Mangabeiras',
+'Mutange',
+'Ouro Preto',
+'Pajuçara',
+'Pescaria',
+'Petrópolis',
+'Pinheiro',
+'Pitanguinha',
+'Poço',
+'Ponta da Terra',
+'Ponta Grossa',
+'Ponta Verde',
+'Pontal da Barra',
+'Prado',
+'Riacho Doce',
+'Rio Novo',
+'Santa Amélia',
+'Santa Lúcia',
+'Santo Amaro',
+'Santos Dumont',
+'São Jorge',
+'Serraria',
+'Tabuleiro do Martins',
+'Trapiche da Barra',
+'Vergel do Lago']
+REGIOES_ADM = ['Região 1', 'Região 2', 'Região 3', 'Região 4', 'Região 5', 'Região 6', 'Região 7', 'Região 8']
 
 def callbacks(app):
-    """
-    Registra todos os callbacks da aplicação
-    """
     
     
     @callback(
@@ -36,11 +76,11 @@ def callbacks(app):
         Input('radio-bairro-regiao', 'value'),
         Input('dropdown-selecionar', 'value'),
     )
-    def grafico_1(viz, bairro_regiao, local):
+    def MAPA(viz, bairro_regiao, local):
         """
-        Atualiza o primeiro gráfico baseado nas seleções
+        Atualiza o MAPA baseado nas seleções
         """
-        return f"Gráfico 1: {viz} - {bairro_regiao}: {local}"
+        return f"MAPA: {viz} - {bairro_regiao}: {local}"
     
     
     @callback(
@@ -49,8 +89,8 @@ def callbacks(app):
         Input('radio-bairro-regiao', 'value'),
         Input('dropdown-selecionar', 'value'),
     )
-    def grafico_2(viz, bairro_regiao, local):
+    def grafico(viz, bairro_regiao, local):
         """
-        Atualiza o segundo gráfico baseado nas seleções
+        Atualiza O gráfico baseado nas seleções
         """
-        return f"Gráfico 2: {viz} - {bairro_regiao}: {local}"
+        return f"Gráfico: {viz} - {bairro_regiao}: {local}"

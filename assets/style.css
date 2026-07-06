@@ -29,15 +29,16 @@ body {
 }
 
 .card-filtros {
-    height: 110px;
+    min-height: 110px;
     width: 100%;
     background: #334155;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    justify-content: center;
+    padding: 15px 20px;
     box-sizing: border-box;
-    gap: 20px;
+    gap: 40px;
 }
 
 .espaçamento {
@@ -52,7 +53,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    flex: 1;
+    flex: 0 0 auto;
     border-right: 2px solid #dadfe5;
     border-left: 2px solid #dadfe5;
     padding: 0 20px;
@@ -60,10 +61,9 @@ body {
 
 .card-filtros-conteudo-esquerda {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: center;
     gap: 10px;
-    flex: 1;
     flex-direction: column;
 }
 
@@ -82,25 +82,26 @@ body {
 }
 
 .botão {
-    width: 130px;
+    width: 150px;
     height: 50px;
     background: #2596ED;
     border-radius: 8px;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: white;
-    font-weight: bold;
-    cursor: pointer;
+
 }
 
 .botão-visualização {
-    width: 60px;
+    min-width: 60px;
     height: 30px;
     background: #2596ED;
     border-radius: 100px;
+    padding: 0 14px;
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
@@ -110,6 +111,8 @@ body {
     font-weight: bold;
     font-size: 10px;
     cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.15s ease;
 }
 
 .dropdown {
@@ -145,6 +148,7 @@ body {
 
 .dropdown .Select-menu-outer {
     border-radius: 8px;
+    max-height: fit-content;
 }
 
 .Texto-dropdown {
@@ -153,20 +157,21 @@ body {
     margin-right: 5px;
     display: inline-block;
     width: 80px;
+    flex-shrink: 0;
 }
 
 .input-pesquisa {
-    width: 100px;
+    width: 110px;
     height: 30px;
     background: #cfd8e1;
     border-radius: 8px;
     padding: 0 10px;
     box-sizing: border-box;
     color: #1E293B;
-
+    font-size: 13px;
+    font-family: inherit;
 }
 
-/* Radio Items - Layout Horizontal */
 #radio-visualizacao {
     display: flex;
     flex-direction: row;
@@ -187,6 +192,11 @@ body {
     margin: 0;
 }
 
+#radio-visualizacao input[type="radio"],
+#radio-bairro-regiao input[type="radio"] {
+    display: none;
+}
+
 input[type="radio"] {
     margin: 0;
     cursor: pointer;
@@ -197,18 +207,15 @@ input[type="radio"] + label {
     cursor: pointer;
 }
 
-/* BOTÃO VISUALIZAÇÃO */
 .botão-visualização {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
 }
 
-/* BOTÃO BAIRRO/REGIÃO */
 .botão {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
 }
+
