@@ -1,10 +1,13 @@
 import geopandas as gpd
 import plotly.graph_objects as go
+from pathlib import Path
 
 from dash import Dash, dcc, html
 
+BASE_DIR = Path(__file__).resolve().parent
+
 bairros = gpd.read_file(
-    "components\Mapa_Bruno\AL_bairros_CD2022\AL_bairros_CD2022.shp",
+    BASE_DIR / "AL_bairros_CD2022" / "AL_bairros_CD2022.shp",
     engine="pyogrio"
 )
 

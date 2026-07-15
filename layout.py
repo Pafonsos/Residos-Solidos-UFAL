@@ -1,4 +1,5 @@
 from dash import html, dcc
+from datetime import date
 
 layout = html.Div([
     html.H1('Geração de resíduos sólidos de Maceió-AL', style={'color': 'white'}),
@@ -8,19 +9,57 @@ layout = html.Div([
             html.Div([
                 html.Div([
                     html.Span('Visualização:', className="Texto-dropdown"),
-                    dcc.RadioItems(['Diario', 'Mensal', 'Anual'], 'Anual', inline=True, labelClassName="botão-visualização", id='radio-visualizacao')
+                    dcc.RadioItems(
+                        options=[
+                            {'label': html.Span('Diario', className="botão-visualização"), 'value': 'Diario'},
+                            {'label': html.Span('Mensal', className="botão-visualização"), 'value': 'Mensal'},
+                            {'label': html.Span('Anual', className="botão-visualização"), 'value': 'Anual'},
+                        ],
+                        value='Anual',
+                        inline=True,
+                        labelClassName="opcao-radio",
+                        inputClassName="radio-input",
+                        id='radio-visualizacao'
+                    )
                 ], className="card-filtros-conteudo-cima"),
 
                 html.Div([
                     html.Span('Periodo:', className="Texto-dropdown"),
-                    dcc.Input(type='text', className="input-pesquisa",id='inicial',placeholder="DD/MM/AAAA"),
-                    dcc.Input(type='text', className="input-pesquisa",id='final', placeholder="DD/MM/AAAA")
+                    html.Div([
+                        dcc.DatePickerSingle(
+                            id='inicial',
+                            display_format='DD/MM/YYYY',
+                            month_format='MMMM YYYY',
+                            placeholder='DD/MM/AAAA'
+                        ),
+                        dcc.DatePickerSingle(
+                            id='final',
+                            display_format='DD/MM/YYYY',
+                            month_format='MMMM YYYY',
+                            placeholder='DD/MM/AAAA'
+                        )
+                    ], className='Date'
+                    ),
+                    html.Div(id='output-periodo')
                 ], className="card-filtros-conteudo-baixo"),
             ]
             ,className="card-filtros-conteudo-esquerda"),
 
             html.Div([
-                dcc.RadioItems(['Bairro', 'Região Administrativa'], 'Região Administrativa', inline=True, labelClassName="botão", id='radio-bairro-regiao'),
+                dcc.RadioItems(
+                    options=[
+                        {'label': html.Span('Bairro', className="botão"), 'value': 'Bairro'},
+                        {'label': html.Span('Região Administrativa', className="botão"), 'value': 'Região Administrativa'},
+                    ],
+                    value='Região Administrativa',
+                    inline=True,
+                    labelClassName="opcao-radio",
+                    inputClassName="radio-input",
+                    id='radio-bairro-regiao'
+                )
+            ], className="card-filtros-conteudo-centro"),
+
+            html.Div([
                 html.Span('Selecionar:', className="Texto-dropdown"),
                 dcc.Dropdown(
                     options=[
@@ -33,7 +72,7 @@ layout = html.Div([
                     className="dropdown",
                     id='dropdown-selecionar'
                 )
-            ], className="card-filtros-conteudo-centro"),
+            ], className="card-filtros-conteudo-direita"),
 
         ], className="card-filtros"),
 

@@ -1,0 +1,6 @@
+dash
+pandas
+plotly
+sqlmodel
+openpyxl
+pywebview

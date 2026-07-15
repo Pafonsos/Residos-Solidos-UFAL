@@ -1,13 +1,16 @@
 import geopandas as gpd
 import dash
 from dash import html
+from pathlib import Path
 #Para rodar o código, é necessário instalar as bibliotecas geopandas e dash utilizando o pip:
 #pip install geopandas dash
 #em rode: pip install 'folium>=0.12.0' para evitar erros de compatibilidade.
 #em seguida no terminal rode: python Mapa_Bruno/main.py
 
+BASE_DIR = Path(__file__).resolve().parent
+
 #READ FILE WITH GEOPANDAS AND SHOW HEADS
-bairros = gpd.read_file("Mapa_Bruno/AL_bairros_CD2022/AL_bairros_CD2022.shp")
+bairros = gpd.read_file(BASE_DIR / "AL_bairros_CD2022" / "AL_bairros_CD2022.shp")
 bairros.head()
 
 
